@@ -43,10 +43,20 @@
         <p id="pDescription"></p>
         <input id="submit" type="submit">
     </form>
+
+
     <form id="task2" name="task2">
         <input type="text" id="inputText">
         <input type="button" value="add item" onclick="addNewItem()">
+
+        <br/>
+        <ul id="inputList">
+
+        </ul>
     </form>
+
+    <input type="button" onclick="listAdults()" value="filtered"/>
+    <ul id="filteredUl"></ul>
 
 </body>
 <script src="main.js"></script>

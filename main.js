@@ -57,5 +57,34 @@ const validateEmail = (email) => {
   //task 2
 let inputArray=[]
 const addNewItem=()=>{
-    
+    let value = document.getElementById('inputText').value
+    inputArray.push(value);
+
+    let list = document.getElementById('inputList')
+    list.innerHTML = ""
+    inputArray.forEach(element => {
+        let item = document.createElement("li")
+        item.innerHTML = element
+        list.appendChild(item)
+    });
+}
+
+
+//task3 
+let obects = [
+    {firstName: "a1", lastName: "b1", age: 12 , job: "j1"},
+    {firstName: "a2", lastName: "b2", age: 22, job: "j2"},
+    {firstName: "a3", lastName: "b3", age: 32, job: "j3"},
+    {firstName: "a4", lastName: "b4", age: 44, job: "j4"},
+]
+
+function listAdults(){ 
+    let filtered = obects.filter( (item) => item.age > 18)
+    let filterUl = document.getElementById("filteredUl")
+    filterUl.innerHTML="";
+    filtered.forEach(element => {
+        let item = document.createElement("li")
+        item.innerHTML = `${element.firstName} ${element.lastName} - ${element.job}`
+        filterUl.append(item)
+    })
 }
